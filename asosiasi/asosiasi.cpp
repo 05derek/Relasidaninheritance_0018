@@ -1,20 +1,16 @@
-#include <iostream>
-#include <string>
-using namespace std;
 
-class orang {
+
+class pelajar : public orang {
 public :
-    string nama;
+    string sekolah;
 
-    orang(string pNama) :
-        nama(pNama) {
-            cout << "orang dibuat\n" << endl;
-        }
-        ~orang() {
-            cout << "orang dihapus\n" << endl;
-        }
-
-        int jumlah(int a, int b) {
-            return a + b;
-        }
+    pelajar(string pNama, string pSekolah) : orang(pNama), sekolah(pSekolah) {
+        cout << "Pelajar dibuat\n" << endl;
+    }
+    ~pelajar() {
+        cout << "Pelajar dihapus\n" << endl;
+    }
+    string perkenalan() {
+        return "Hallo, nama saya " + nama + "dari sekolah " + sekolah + "\n\n"
+    }
 };
